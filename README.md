@@ -6,13 +6,13 @@
 
 3- alterar as tabelas hosts "www.simoes.com"
 
-windows:
+    windows:
 
-    c:\windows\systems32\drivers\etc\hosts
+        c:\windows\systems32\drivers\etc\hosts
 
-linux:
+    linux:
 
-    /etc/hosts
+        /etc/hosts
 
 1- instalar certificados raiz e intermedia no browser do windows
 
