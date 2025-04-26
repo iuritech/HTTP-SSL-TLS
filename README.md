@@ -41,3 +41,8 @@ subestituir -
     SSLCertificateKeyFile /etc/ssl/private/server.key
     </VirtualHost>
     </IfModule>
+
+6- ativar virtual host
+
+    sudo a2ensite default-ssl
+    sudo service apache2 restart
