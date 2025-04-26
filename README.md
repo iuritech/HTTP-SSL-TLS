@@ -8,6 +8,7 @@
 
     c:\windows\systems32\drivers\etc\hosts
 
+
     /etc/hosts
 
 1- instalar certificados raiz e intermedia no browser do windows
