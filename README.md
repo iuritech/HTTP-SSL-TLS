@@ -4,15 +4,40 @@
 
     sudo apt install apache2
 
-3- alterar as tabelas hosts "www.simoes.com"
+2- alterar as tabelas hosts "www.simoes.com"
 
-    windows:
+windows:
 
-        c:\windows\systems32\drivers\etc\hosts
+    c:\windows\systems32\drivers\etc\hosts
 
-    linux:
+linux:
 
-        /etc/hosts
+    /etc/hosts
 
-1- instalar certificados raiz e intermedia no browser do windows
+3- instalar certificados raiz e intermedia no browser do windows
 
+4- ativar modulo ssl do apache
+
+    sudo a2enmod ssl
+    sudo service apache2 restart
+
+5- Crie um servidor virtual seguro, baseado em IP, cujo diretório raiz seja /var/www/simoes/ com index.html
+
+Dica: ficheiro 
+
+    /etc/apache2/sites-available/default-ssl.conf
+
+subestituir - 
+
+    <IfModule mod_ssl.c>
+    <VirtualHost _default_:443>
+    ServerName www.simoes.cb
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/simoes
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/server.crt
+    SSLCertificateKeyFile /etc/ssl/private/server.key
+    </VirtualHost>
+    </IfModule>
