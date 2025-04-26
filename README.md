@@ -37,10 +37,15 @@ subestituir -
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
     SSLEngine on
-    SSLCertificateFile /etc/ssl/certs/server.crt
-    SSLCertificateKeyFile /etc/ssl/private/server.key
+    SSLCertificateFile /etc/ssl/certs/www.simoes.com.csr.pem  
+    SSLCertificateKeyFile /etc/ssl/private/www.simoes.com.key.pem
     </VirtualHost>
     </IfModule>
+
+mover certificados
+
+    cp /root/HTTP-SSL-TLS/certs/www.simoes.com.csr.pem /etc/ssl/certs/
+    cp /root/HTTP-SSL-TLS/certs/www.simoes.com.key.pem /etc/ssl/private/
 
 6- ativar virtual host
 
