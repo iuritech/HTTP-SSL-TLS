@@ -6,8 +6,11 @@
 
 3- alterar as tabelas hosts "www.simoes.com"
 
+windows:
+
     c:\windows\systems32\drivers\etc\hosts
 
+linux:
 
     /etc/hosts
 
